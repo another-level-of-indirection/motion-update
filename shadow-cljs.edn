@@ -1,0 +1,28 @@
+{:deps {:aliases [:dev]}
+
+ ;; Built-in development HTTP server (alternative to Ring)
+ :dev-http {8080 "resources/public"}
+
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "resources/public/js"
+   :asset-path "/js"
+   :js-options {:resolve {"process" {:target :npm :require "process/browser"}}}
+   :modules {:app {:init-fn motion.dev/init
+                   :entries [motion.dev]}}
+   :devtools {:after-load motion.dev/reload
+              :preloads []}
+   :dev {:compiler-options {:closure-defines {}}}}
+
+  :release
+  {:target :browser
+   :output-dir "build/js"
+   :asset-path "js"
+   :js-options {:resolve {"process" {:target :npm :require "process/browser"}}}
+   :modules {:app {:init-fn motion.prod/init
+                   :entries [motion.prod]}}
+   :compiler-options {:optimizations :advanced
+                      :infer-externs :auto}
+   :build-options {:manifest-name "manifest.json"}}}}
+

@@ -1,0 +1,64 @@
+### OS
+.DS_Store
+
+### Editors/IDE
+.idea/
+.vscode/
+.cursor/
+.calva/
+*.iml
+.cursorindexingignore/
+.specstory/
+.lsp/
+.clj-kondo/
+
+### Node.js
+node_modules/
+pnpm-debug.log*
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+### shadow-cljs (dev) outputs and caches
+.shadow-cljs/
+.cpcache/
+resources/public/js/cljs-runtime/
+resources/public/js/app.js
+resources/public/js/app.js.map
+resources/public/js/main.js
+resources/public/js/main.js.map
+resources/public/js/manifest.edn
+
+### Release build artifacts
+build/
+target/
+
+### REPL and tooling temp files
+.nrepl-port
+.repl-history
+repl-history
+repl.out
+.rebel_readline_history
+
+### Clojure tooling caches
+.clj-kondo/.cache/
+.lsp/.cache/
+
+### Logs
+*.log
+log/
+logs/
+
+### Temp files
+*.swp
+*~
+*.tmp
+
+### Environment files (do not commit secrets)
+.env
+.env.local
+.env.*.local
+

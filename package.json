@@ -1,0 +1,22 @@
+{
+  "name": "motion",
+  "version": "0.1.0",
+  "description": "Science fiction user interfaces implemented in ClojureScript, React, and SVG",
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "dev:full": "./dev-auto.sh",
+    "release": "shadow-cljs release release",
+    "compile": "shadow-cljs compile app",
+    "repl": "shadow-cljs cljs-repl app",
+    "server": "dev=true clj -M:dev -m motion.server"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^3.2.1"
+  },
+  "dependencies": {
+    "process": "^0.11.10",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "scheduler": "^0.25.0"
+  }
+}
