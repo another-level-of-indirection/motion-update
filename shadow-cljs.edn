@@ -30,7 +30,10 @@
    :modules {:app {:init-fn motion.prod/init
                    :entries [motion.prod]}}
    :compiler-options {:optimizations :advanced
-                      :infer-externs :auto}
+                      :infer-externs :auto
+                      :static-fns true
+                      :elide-asserts true
+                      :pretty-print false}
    :build-options {:manifest-name "manifest.json"}}}}
 
 
