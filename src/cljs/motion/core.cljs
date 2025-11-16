@@ -5,7 +5,7 @@
             [clojure.string :as string]
             [reitit.frontend :as rf]
             [reitit.frontend.easy :as rfe]
-            [motion.utils :refer [svg-arc timeline g-trans make-link]]
+            [motion.utils :refer [svg-arc timeline g-trans]]
             [motion.demos :as demos])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
@@ -38,7 +38,7 @@
            [demo size event-chan]]]
 
          [:div#back-link
-          [:a {:href (make-link "/")} "<-"]]]))))
+          [:a {:href "#/"} "<-"]]]))))
 
 ;; -------------------------
 ;; Views
@@ -49,7 +49,7 @@
    [:h2 "demos"]
    [:ol
     (doall (map (fn [[d f]]
-                  [:li {:key d} [:a {:href (str "v?" d)} d]])
+                  [:li {:key d} [:a {:href (str "#/v?" d)} d]])
                 (partition 2 demos/demos)))]])
 
 (defn component-page-viewer []
@@ -98,6 +98,6 @@
   (rfe/start!
    (rf/router routes)
    on-navigate
-   {:use-fragment false})
+   {:use-fragment true})
   (mount-root))
 
