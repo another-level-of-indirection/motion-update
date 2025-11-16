@@ -4,11 +4,10 @@
   "description": "Science fiction user interfaces implemented in ClojureScript, React, and SVG",
   "scripts": {
     "dev": "shadow-cljs watch app",
-    "dev:full": "./dev-auto.sh",
     "release": "shadow-cljs release release",
     "compile": "shadow-cljs compile app",
     "repl": "shadow-cljs cljs-repl app",
-    "server": "dev=true clj -M:dev -m motion.server"
+    "deploy": "node scripts/deploy.js"
   },
   "devDependencies": {
     "shadow-cljs": "^3.2.1"

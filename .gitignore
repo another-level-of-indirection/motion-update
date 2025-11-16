@@ -36,6 +36,10 @@ resources/public/js/manifest.edn
 build/
 target/
 
+### GitHub Pages deployment
+# docs/ folder is committed for GitHub Pages
+# Do NOT ignore docs/ - it contains the production build
+
 ### REPL and tooling temp files
 .nrepl-port
 .repl-history

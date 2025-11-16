@@ -22,7 +22,8 @@
             [motion.demo-hex-match :refer [component-hex-match]]
             [motion.demo-hex-territory :refer [component-hex-territory]]
             [motion.demo-hex-lights :refer [component-hex-lights]]
-            [motion.demo-rainbow-orb :refer [component-demo-rainbow-orb]]))
+            [motion.demo-rainbow-orb :refer [component-demo-rainbow-orb]]
+            [motion.demo-agents :refer [component-demo-agents]]))
 
 (defn ^export component-demo-curved-path [size event-chan]
   (let [style (styles :blue-line)]
@@ -231,4 +232,5 @@
             "interactive: hex popout" component-demo-hex-popout
             "interactive: spiral galaxy" component-demo-spiral-galaxy
             "interactive: kaleidoscope" component-demo-kaleidoscope
-            "animated: rainbow orb" component-demo-rainbow-orb])
+            "animated: rainbow orb" component-demo-rainbow-orb
+            "animated: agents" component-demo-agents])

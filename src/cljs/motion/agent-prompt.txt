@@ -1,0 +1,25 @@
+use demo_agents.cljs as the foundation for a more ambitious simulations
+rename asker and teller agents to questioner and answerer agents
+the purpose of the simulation is to evolve an information economy/ecololgy where cooperation between simple agents evolves from competitive pressures.
+the simulation uses three kinds of agents: queston agents (QA) and answer agents (AA) and horses-mouth agents (HA).
+QAs keep track of which AAs are more likely to give correct answers
+AAs have the ability to answer certain kinds of questions.
+Some AAs have the ability to ask other AAs for answers and compose
+AAs learn how to answers by asking other agents for 
+for the prototype of this simulation we will use the following constraints:
+    tokens will not be used 
+    there will be one HA one QA and six AAs.
+    the QA has a list of questions - for the prototyoe the questions are simple math s-expressions (+ - * /)
+    questions are Clojure s-expressions, answers can be numbers, strings or s-expressions
+    the QA iterates through the question list, posting the questions to all of the AAs.
+    each AA has the ability to answer some questions as specified by it's "{:allow allowed-symbols}" parameter
+    each AA will process the question and submit it's answer to the QA if it has the ability needed to do so.
+    the QA will select one of the answers from those submitted by the AAs.
+    when a QA accepts an answer from an AA the QA can verify the answer by sending the question to the HA.
+        the HA agent has the ability to answer all questions correctly
+    
+
+    we want the AA and QA agents to build a model of themselves and other agents.
+    some AAs can only answer specific kinds of questions like + or -
+    some AAs have the ability to ask other AAs to provide partial answers 
+    
