@@ -1,6 +1,6 @@
 (ns motion.core
   (:require [reagent.core :as reagent :refer [atom]]
-            [reagent.dom.client :as rdomc]
+            [reagent.dom :as rdom]
             [cljs.core.async :refer [<! put! close! timeout chan] :as async]
             [clojure.string :as string]
             [reitit.frontend :as rf]
@@ -90,11 +90,9 @@
 ;; -------------------------
 ;; Initialize app
 
-(defonce root
-  (rdomc/create-root (.getElementById js/document "app")))
-
 (defn mount-root []
-  (rdomc/render root [current-page-component]))
+  (rdom/render [current-page-component]
+               (.getElementById js/document "app")))
 
 (defn init! []
   (rfe/start!

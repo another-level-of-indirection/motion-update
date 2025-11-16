@@ -33,7 +33,9 @@
                       :infer-externs :auto
                       :static-fns true
                       :elide-asserts true
-                      :pretty-print false}
+                      :pretty-print false
+                      :warnings-as-errors false
+                      :rewrite-polyfills false}
    :build-options {:manifest-name "manifest.json"}}}}
 
 
