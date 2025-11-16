@@ -16,8 +16,10 @@ While the app itself is pure JavaScript, **Shadow CLJS (the build tool) requires
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [Java JDK](https://adoptium.net/) (version 11 or higher)
+- [Java JDK](https://adoptium.net/) (version 11 or higher) - required for Shadow CLJS build tool
 - [pnpm](https://pnpm.io/) (or npm/yarn)
+
+**Note:** You do NOT need Clojure CLI tools (`clj`/`clojure`). All dependencies are managed by Shadow CLJS directly.
 
 ## Getting Started
 
@@ -95,7 +97,7 @@ This project is configured for easy deployment to GitHub Pages.
 ### One-Command Deployment
 
 ```bash
-pnpm deploy
+pnpm gh-pages
 ```
 
 This command will:
@@ -131,7 +133,7 @@ After running the deploy command:
 Whenever you make changes:
 
 ```bash
-pnpm deploy
+pnpm gh-pages
 git add docs/
 git commit -m "Update deployment"
 git push

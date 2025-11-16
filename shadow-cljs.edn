@@ -1,5 +1,11 @@
 {;; Source paths for ClojureScript files
- :source-paths ["src/cljs" "env/dev/cljs"]
+ :source-paths ["src/cljs" "env/dev/cljs" "env/prod/cljs"]
+
+ ;; Dependencies managed by Shadow CLJS
+ ;; Note: core.async is provided by Shadow CLJS itself
+ :dependencies [[org.babashka/sci "0.10.49"]
+                [reagent/reagent "2.0.1"]
+                [metosin/reitit-frontend "0.7.2"]]
 
  ;; Built-in development HTTP server
  :dev-http {8080 "resources/public"}
@@ -25,7 +31,6 @@
                    :entries [motion.prod]}}
    :compiler-options {:optimizations :advanced
                       :infer-externs :auto}
-   :build-options {:manifest-name "manifest.json"}
-   :source-paths ["src/cljs" "env/prod/cljs"]}}}
+   :build-options {:manifest-name "manifest.json"}}}}
 
 

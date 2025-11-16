@@ -7,7 +7,7 @@
     "release": "shadow-cljs release release",
     "compile": "shadow-cljs compile app",
     "repl": "shadow-cljs cljs-repl app",
-    "deploy": "node scripts/deploy.js"
+    "gh-pages": "node scripts/deploy.js"
   },
   "devDependencies": {
     "shadow-cljs": "^3.2.1"
